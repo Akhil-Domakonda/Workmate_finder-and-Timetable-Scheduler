@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" cdsdsd Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="icon" href="/images/website_icon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/Welcome.css">
+</head>
+<body>
+
+    <div class="nav" >
+        <h1>Home</h1>
+        <h4>Timetable Scheduler</h4>
+        <h4>Project collaborator</h4>
+        <%if(userData== undefined){%>
+          <a href="/login" class="btn btn-light btn-lg "> <b>Local Login</b></a>
+        <a href="/signup" class="btn btn-light btn-lg"> <b>Local Signup</b></a>
+        <%} else{%>
+          <h4><a href="/dashboard" class="dashboard">Dashboard</a></h4>
+          <a href="/logout" class="btn btn-light btn-lg"><strong>Logout</strong></a>
+        <%}%>
+        
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Timetable Scheduler</h4>
+                  <p class="card-text">User can schedule their freetime tasks in the hectic timetable during thhe semesters</p>
+                  <a href="#" class="btn ">Add Timetable</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Project Collaborator</h4>
+                  <p class="card-text">Aspiring developers these are not able to find good teams for making projects.Through this,one can find any vacant position for project collaboration</p>
+                  <a href="/projectsCollaborator/projectsView" class="btn">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+<%- include ('./partials/footer.ejs'); -%>
